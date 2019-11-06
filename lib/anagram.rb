@@ -6,13 +6,9 @@ class Anagram
       @word = word 
     end 
     
-    def match(word)
-      @word.each do |word|
-        if word.sort == [" "].sort 
-          true 
-        else word.sort.not_eq_to [""].sort 
-          false 
-        end 
+    def match(word_array)
+      word_array.select do |word|
+        word.split("").sort == @word.split("").sort 
       end 
     end 
     
