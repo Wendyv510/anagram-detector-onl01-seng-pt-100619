@@ -9,9 +9,9 @@ class Anagram
     def match(word)
       @word.each do |word|
         if word.sort == [" "].sort 
-          =true 
+          =>true 
         else word.sort.not_eq_to [""].sort 
-          =false 
+          =>false 
         end 
       end 
     end 
